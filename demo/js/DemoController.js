@@ -92,6 +92,7 @@
             var focusedInput = $('a[data-ng-keypad-input]:focus'),
                 inputs = $('a[data-ng-keypad-input]'),
                 foundIndex = findInputInInputs(focusedInput,inputs),
+                value = controller.$viewValue,
                 index = 0;
 
             switch(key){
@@ -116,6 +117,40 @@
                         }
                     }
                     inputs.eq(index).focus();
+                    break;
+                case "SPACE":
+                    value += ' ';
+                    break;
+                case "BACKSPACE":
+                    value = value.substr(0, value.length - 1);
+                    break;
+                case "TAB":
+                    // Assuming for now that we want to insert tab character.
+                    value += '\t';
+                    break;
+                case "CAPSLOCK":
+                    // pass
+                    break;
+                case "ENTER":
+                    // pass
+                    break;
+                case "L-SHIFT":
+                    // pass
+                    break;
+                case "R-SHIFT":
+                    // pass
+                    break;
+                case "L-CTRL":
+                    // pass
+                    break;
+                case "L-ALT":
+                    // pass
+                    break;
+                case "R-ALT":
+                    // pass
+                    break;
+                case "R-CTRL":
+                    // pass
                     break;
             }
         });

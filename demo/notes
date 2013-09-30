@@ -1,0 +1,7 @@
+ok, so we've added all(?) the characters we need. now we're looking at adding
+meta-keys and their functionality. the actual difficult part. there's
+backspace, tab, capslock, enter, shift, control, and alt, (all of which will
+need a left and right, which may cause complications), and space, which was
+supposed to be trivial. after that, we may look at implementing a direction
+pad.
+
