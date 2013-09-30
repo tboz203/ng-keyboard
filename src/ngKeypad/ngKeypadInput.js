@@ -142,10 +142,47 @@
          */
         function handleModifierKeyPressed(event, key, padId) {
             if (self.padId === padId && self.active) {
-                if (key === "CLEAR") {
-                    controller.$setViewValue("");
-                    $scope.$apply();
+                var value = controller.$viewValue;
+                switch(key){
+                    case "CLEAR":
+                        value = ""
+                    case "SPACE":
+                        value += ' ';
+                        break;
+                    case "BACKSPACE":
+                        value = value.substr(0, value.length - 1);
+                        break;
+                    case "TAB":
+                        // Assuming for now that we want to insert tab character.
+                        value += '\t';
+                        break;
+                    case "CAPSLOCK":
+                        // pass
+                        break;
+                    case "ENTER":
+                        // pass
+                        break;
+                    case "L-SHIFT":
+                        // pass
+                        break;
+                    case "R-SHIFT":
+                        // pass
+                        break;
+                    case "L-CTRL":
+                        // pass
+                        break;
+                    case "L-ALT":
+                        // pass
+                        break;
+                    case "R-ALT":
+                        // pass
+                        break;
+                    case "R-CTRL":
+                        // pass
+                        break;
                 }
+                controller.$setViewValue(value);
+                $scope.$apply();
             }
         };
 
