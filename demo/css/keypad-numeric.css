@@ -62,6 +62,10 @@
   width: 82px;
 }
 
+.numpad .button-wrapper .button-double-wide {
+  width: 100px;
+}
+
 .numpad .button-wrapper .pressed {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dadada), color-stop(100%, #bebebe));
   background-image: -webkit-linear-gradient(#dadada, #bebebe);

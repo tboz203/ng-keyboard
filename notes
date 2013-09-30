@@ -1,3 +1,5 @@
+## Notes
+
 ok, from the top. went through and renamed everything in the project from 'pad'
 to 'board', like keypad and padID, etc. something somwhere broke, branched and
 rolled back to original. started at a different place, in the partial. changed
@@ -5,6 +7,15 @@ from just digits to entire keyboard. characters go in fine, still working on
 meta key functionality. re-worked the CSS such that it looks like a keyboard,
 which is nice.
 
+---
+
 figured out what was wrong with the meta keys: it couldn't resolve 'controller'
 inside the demo code. moved it all over to src/ngKeypad/ngKeypadInput.js and it
 works like a charm.
+
+---
+
+we need to figure out what to do with shift/ctrl/alt.
+- do we add some kind of parameter to the partial template code?
+- add a function to accept the printed character and return the modified one?
+- do we want to show shift characters? (methinks yes... more complicated)
